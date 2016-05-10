@@ -1,2 +1,23 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<!DOCTYPE html>
+<html lang='en'>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="content text-left">
+          <h4><%= @task.name.capitalize %></h4>
+          <p><strong>Due Date:</strong> <%= @task.due %></p>
+          <p>
+              <% check = '<i class="fa fa-check-circle" aria-hidden="true"></i>'.html_safe %>
+              <% uncheck = '<i class="fa fa-circle-o" aria-hidden="true"></i>'.html_safe %>
+              <%= @task.done? ? check : uncheck %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</html>
